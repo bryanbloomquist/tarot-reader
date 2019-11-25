@@ -19,10 +19,9 @@ const threeCardDraw = () => {
   present = deckArray[1];
   future = deckArray[2];
   $("#card-deck").empty();
-  $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
+  $("#card-deck").append("<div class='col-3'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
   for (let i = 0; i < 3; i++) {
-    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' /></col>"
-    );
+    $("#card-deck").append("<div class='col-3'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' /></col>");
   }
   $("#card-deck").append(
     "<div class='col-12 reading'>"+
@@ -34,5 +33,26 @@ const threeCardDraw = () => {
 };
 
 const yesNoDraw = () => {
-  console.log("You have selected 'Yes-No Question'.");
+  shuffle(deckArray);
+  $("#card-deck").empty();
+  $("#card-deck").append("<div class='col-3'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
+  $("#card-deck").append(
+    "<div class='col-9'>"+
+      "<div class='input-group mb-3'>"+
+        "<input type='text' class='form-control' id='userQuestion' placeholder='Enter your Yes/No question here...' aria-label='Users Question' aria-describedby='submitButton'>"+
+        "<div class='input-group-append'>"+
+          "<button class='btn btn-outline-light' type='button' id='submitButton' onclick=askQuestion()>Submit</button>"+
+        "</div>"+
+      "</div>"+
+    "</div>"
+  )
+  $("#userQuestion").focus();
 };
+
+const askQuestion = () => {
+  if (document.querySelector("#userQuestion").value){
+    console.log("you are here");
+    $("#card-deck").append("<div class='col-3'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' /></col>");
+    $("#card-deck").append("<div class='col-9 reading'><p>"+deckArray[0].yesno+"</p></div>");
+  }
+}
