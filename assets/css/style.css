@@ -7,7 +7,7 @@
 
 body {
   background-color: #663399;
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'IM Fell DW Pica', serif;
 }
 
 .jumbotron {
@@ -19,13 +19,13 @@ body {
   margin-bottom: 20px;
 }
 
-/* #userQuestion {
-  height: 100%;
-} */
+.container {
+  max-width: 600px;
+}
 
 #card-deck p{
   color: #ffffff;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 #card-deck .reading{
