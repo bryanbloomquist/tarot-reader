@@ -8,18 +8,29 @@
   <link rel="stylesheet" href="./assets/css/reset.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap">
   <title>Tarot Card Reader</title>
 </head>
 <body>
   <header class="jumbotron text-center p-3">
     <h1 class="display-4 text-light">Get your Tarot reading!</h1>
-    <button type="button" class="btn btn-outline-light m-3" id="past-present-future">Past, Present, Future</button>
-    <button type="button" class="btn btn-outline-light m-3" id="yes-no">"Yes/No" Question</button>
+    <button type="button" class="btn btn-outline-light m-3" id="past-present-future" onclick=threeCardDraw()>Past, Present, Future</button>
+    <button type="button" class="btn btn-outline-light m-3" id="yes-no" onclick=yesNoDraw()>"Yes/No" Question</button>
   </header>
+  <section class="container">
+    <div id="card-deck" class="row justify-content-center">
+      <div class="col-2">
+        <img src="./assets/images/card-backs/3.png" alt="Tarot Card Back" />
+      </div>
+    </div>
+  </section>
   <footer>
     <a href="https://bryanbloomquist.com" target="_blank"><img src="./assets/images/logo.png" alt="B B Logo" /></a>
     <p>&copy; 2019</p>
   </footer>
   <div id="fog"></div>
+  <script src="./assets/javascript/rw-tarot-deck.js"></script>
+  <script src="./assets/javascript/code.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </body>
 </html>

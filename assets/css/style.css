@@ -7,10 +7,28 @@
 
 body {
   background-color: #663399;
+  font-family: 'Kaushan Script', cursive;
 }
 
 .jumbotron {
   background-color: #22222211;
+}
+
+#card-deck img{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#card-deck p{
+  color: #ffffff;
+  font-size: 1.5em;
+}
+
+#card-deck .reading{
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: #22222288;
+  padding: 25px;
 }
 
 footer {
@@ -43,9 +61,11 @@ footer img:hover {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: 125vh;
   overflow: hidden;
   pointer-events: none;
+  background-attachment: fixed;
+
 }
 #fog:before, #fog:after {
   content: "";
