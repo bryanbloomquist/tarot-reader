@@ -19,10 +19,6 @@ body {
   margin-bottom: 20px;
 }
 
-.container {
-  max-width: 600px;
-}
-
 #card-deck p{
   color: #ffffff;
   font-size: 1.3em;
@@ -33,6 +29,11 @@ body {
   border-radius: 10px;
   background-color: #22222288;
   padding: 25px;
+}
+
+#explore-tarot-display img {
+  width: 100px;
+  margin: 10px;
 }
 
 footer {

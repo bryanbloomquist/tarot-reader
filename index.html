@@ -15,12 +15,15 @@
     <h1 class="display-4 text-light">Get your Tarot reading!</h1>
     <button type="button" class="btn btn-outline-light m-3" id="past-present-future" onclick=threeCardDraw()>Past, Present, Future</button>
     <button type="button" class="btn btn-outline-light m-3" id="yes-no" onclick=yesNoDraw()>"Yes/No" Question</button>
+    <button type="button" class="btn btn-outline-light m-3" id="explore-tarot" onclick=exploreTarot()>Explore the Tarot</button>
   </header>
   <section class="container">
     <div id="card-deck" class="row justify-content-center">
-      <div class="col-3">
+      <div class="col-2">
         <img src="./assets/images/card-backs/3.png" alt="Tarot Card Back" />
       </div>
+    </div>
+    <div class="row justify-content-center" id="explore-tarot-display"></div>>
     </div>
   </section>
   <footer>
