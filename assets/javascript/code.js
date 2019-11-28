@@ -140,10 +140,10 @@ const showTarotModal = (tVal) => {
   $("#tarot-modal").modal("show");
   $("#tarot-modal-row").empty();
   $("#tarot-modal-row").html(
-    "<div class='col-5'>"+
+    "<div class='col-6 col-sm-5 mx-auto'>"+
       "<img src='"+rwTarotDeck[tVal].image+"' alt='"+rwTarotDeck[tVal].name+"' style='width:100%' />"+
     "</div>"+ 
-    "<div class='col-7'>"+
+    "<div class='col-12 col-sm-7'>"+
       "<h1>"+rwTarotDeck[tVal].name+"</h1><hr />"+
       "<p>"+rwTarotDeck[tVal].keywords+"</p><hr />"+
       "<p>"+rwTarotDeck[tVal].general+"</p>"+
