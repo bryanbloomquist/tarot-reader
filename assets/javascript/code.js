@@ -10,7 +10,8 @@ const shuffle = (array) => {
 	return array;
 };
 
-let deckArray = rwTarotDeck;
+let deckArray = [];
+deckArray = deckArray.concat(rwTarotDeck);
 let past, present, future, question, min, max;
 
 const threeCardDraw = () => {
@@ -22,20 +23,27 @@ const threeCardDraw = () => {
   $('#explore-tarot-display').empty();
   $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
   for (let i = 0; i < 3; i++) {
-    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' /></col>");
-  }
+    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' class='tarot-cards' value='"+deckArray[i].id+"' /></col>");
+  };
   $("#card-deck").append(
     "<div class='col-12 reading'>"+
       "<p><b>The Past:</b> ("+past.name+") "+past.past+"</p>"+
       "<p><b>The Present:</b> ("+present.name+") "+present.present+"</p>"+
       "<p><b>The Future:</b> ("+future.name+") "+future.future+"</p>"+
     "</div>"
-  )
+  );
+  let tarotEls = document.querySelectorAll('.tarot-cards');
+  for (let i=0; i<tarotEls.length; i++){
+    let tarotEl = tarotEls[i];
+    let tValue = tarotEls[i].attributes.value.value;
+    tarotEl.addEventListener("click", function() {showTarotModal(tValue);})
+  }
 };
 
 const yesNoDraw = () => {
   shuffle(deckArray);
   $("#card-deck").empty();
+  $('#explore-tarot-display').empty();
   $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
   $("#card-deck").append(
     "<div class='col-10'>"+
@@ -55,13 +63,18 @@ const askQuestion = () => {
     question = $("#userQuestion")[0].value;
     $("#card-deck").empty();
     $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
-    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' /></col>");
+    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' class='tarot-cards' value='"+deckArray[0].id+"' /></col>");
     $("#card-deck").append(
       "<div class='col-8 reading'>"+
-        "<p>'"+question+"'</p>"+
+        "<p>"+question+"</p>"+
         "<p>"+deckArray[0].yesno+"</p>"+
       "</div>"
     );
+    let tarotEl = document.querySelector('.tarot-cards');
+    let tValue = deckArray[0].id;
+    tarotEl.addEventListener("click", function() {
+      showTarotModal(tValue);
+    })
   }
 };
 
@@ -110,7 +123,30 @@ const displayCards = (option) => {
   $('#explore-tarot-display').empty();
   for (let i = min; i <= max; i++) {
     $('#explore-tarot-display').append(
-      "<img src='"+rwTarotDeck[i].image+"' alt='"+rwTarotDeck[i].name+"' value='"+rwTarotDeck[i].id+"' />"
+      "<img src='"+rwTarotDeck[i].image+"' alt='"+rwTarotDeck[i].name+"' value='"+rwTarotDeck[i].id+"' class='tarot-cards'/>"
     )
-  };  
+  }; 
+  let tarotEls = document.querySelectorAll('.tarot-cards');
+  for (let i=0; i<tarotEls.length; i++){
+    let tarotEl = tarotEls[i];
+    let tValue = tarotEls[i].attributes.value.value;
+    tarotEl.addEventListener("click", function() {
+      showTarotModal(tValue);
+    })
+  }
+}
+
+const showTarotModal = (tVal) => {
+  $("#tarot-modal").modal("show");
+  $("#tarot-modal-row").empty();
+  $("#tarot-modal-row").html(
+    "<div class='col-5'>"+
+      "<img src='"+rwTarotDeck[tVal].image+"' alt='"+rwTarotDeck[tVal].name+"' style='width:100%' />"+
+    "</div>"+ 
+    "<div class='col-7'>"+
+      "<h1>"+rwTarotDeck[tVal].name+"</h1><hr />"+
+      "<p>"+rwTarotDeck[tVal].keywords+"</p><hr />"+
+      "<p>"+rwTarotDeck[tVal].general+"</p>"+
+    "</div>"
+  );
 }

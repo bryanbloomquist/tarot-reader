@@ -36,6 +36,25 @@ body {
   margin: 10px;
 }
 
+.modal-content {
+  color: #ffffff;
+  text-align: center;
+  background-color: #222222;
+  border: 5px solid #222222;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+.modal-content hr {
+  background-color: #ffffff;
+}
+
+#tarot-modal-row .col-7 {
+  padding: 25px 50px 25px 25px;
+  font-size: 1.2em;
+}
+
+
 footer {
   position: fixed;
   bottom: 0;
@@ -99,5 +118,3 @@ footer img:hover {
     transform: translate3d(-200vw, 0, 0);
   }
 }
-
-/*# sourceMappingURL=style.css.map */
