@@ -43,7 +43,9 @@ The user has three options.
 
 ## Credits 
 Fisher-Yates shuffle function taken from https://frankmitchell.org/2015/01/fisher-yates/
+
 All images and tarot meanings were taken from https://www.trustedtarot.com/card-meanings/
+
 fog background from https://codepen.io/camstephensdomo/pen/PVqpaP
 
 ## Contributing 
