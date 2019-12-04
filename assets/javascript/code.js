@@ -21,9 +21,8 @@ const threeCardDraw = () => {
   future = deckArray[2];
   $("#card-deck").empty();
   $('#explore-tarot-display').empty();
-  $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
   for (let i = 0; i < 3; i++) {
-    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' class='tarot-cards' value='"+deckArray[i].id+"' /></col>");
+    $("#card-deck").append("<div class='col-4 col-md-3 col-lg-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' class='tarot-cards' value='"+deckArray[i].id+"' /></col>");
   };
   $("#card-deck").append(
     "<div class='col-12 reading'>"+
@@ -44,7 +43,7 @@ const yesNoDraw = () => {
   shuffle(deckArray);
   $("#card-deck").empty();
   $('#explore-tarot-display').empty();
-  $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
+  $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
   $("#card-deck").append(
     "<div class='col-10'>"+
       "<div class='input-group mb-1'>"+
@@ -62,10 +61,10 @@ const askQuestion = () => {
   if (document.querySelector("#userQuestion").value){
     question = $("#userQuestion")[0].value;
     $("#card-deck").empty();
-    $("#card-deck").append("<div class='col-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
-    $("#card-deck").append("<div class='col-2'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' class='tarot-cards' value='"+deckArray[0].id+"' /></col>");
+    $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
+    $("#card-deck").append("<div class='col-4 col-md-2'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' class='tarot-cards' value='"+deckArray[0].id+"' /></col>");
     $("#card-deck").append(
-      "<div class='col-8 reading'>"+
+      "<div class='col-12 col-md-8 reading mb-5'>"+
         "<p>"+question+"</p>"+
         "<p>"+deckArray[0].yesno+"</p>"+
       "</div>"
@@ -82,11 +81,11 @@ const exploreTarot = () => {
   $("#card-deck").empty();
   $('#explore-tarot-display').empty();
   $("#card-deck").html(
-    "<button type='button' class='btn btn-outline-light explorer m-3' id='majorArcana'>Major Arcana</button>"+
-    "<button type='button' class='btn btn-outline-light explorer m-3' id='suitOfCups'>Suit of Cups</button>"+
-    "<button type='button' class='btn btn-outline-light explorer m-3' id='suitOfPentacles'>Suit of Pentacles</button>"+
-    "<button type='button' class='btn btn-outline-light explorer m-3' id='suitOfSwords'>Suit of Swords</button>"+
-    "<button type='button' class='btn btn-outline-light explorer m-3' id='suitOfWands'>Suit of Wands</button>"
+    "<button type='button' class='btn btn-outline-light explorer m-1' id='majorArcana'>Major Arcana</button>"+
+    "<button type='button' class='btn btn-outline-light explorer m-1' id='suitOfCups'>Suit of Cups</button>"+
+    "<button type='button' class='btn btn-outline-light explorer m-1' id='suitOfPentacles'>Suit of Pentacles</button>"+
+    "<button type='button' class='btn btn-outline-light explorer m-1' id='suitOfSwords'>Suit of Swords</button>"+
+    "<button type='button' class='btn btn-outline-light explorer m-1' id='suitOfWands'>Suit of Wands</button>"
   )
   let deckEls = document.querySelectorAll(".explorer");
   for (let i=0; i<deckEls.length; i++){
