@@ -41,8 +41,6 @@ body {
   text-align: center;
   background-color: #222222;
   border: 5px solid #222222;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
 }
 
 .modal-content hr {

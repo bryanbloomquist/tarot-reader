@@ -12,25 +12,24 @@ const shuffle = (array) => {
 
 let deckArray = [];
 deckArray = deckArray.concat(rwTarotDeck);
-let past, present, future, question, min, max;
 
 const threeCardDraw = () => {
   shuffle(deckArray);
-  past = deckArray[0];
-  present = deckArray[1];
-  future = deckArray[2];
+  let past = deckArray[0];
+  let present = deckArray[1];
+  let future = deckArray[2];
   $("#card-deck").empty();
   $('#explore-tarot-display').empty();
   for (let i = 0; i < 3; i++) {
-    $("#card-deck").append("<div class='col-4 col-md-3 col-lg-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' class='tarot-cards' value='"+deckArray[i].id+"' /></col>");
+    $("#card-deck").append("<div class='col-4 col-md-3 col-lg-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' class='tarot-cards animated flipInY delay-"+i+"s' value='"+deckArray[i].id+"' /></col>");
   };
-  $("#card-deck").append(
-    "<div class='col-12 reading'>"+
+  setTimeout(function() {$("#card-deck").append(
+    "<div class='col-10 reading'>"+
       "<p><b>The Past:</b> ("+past.name+") "+past.past+"</p>"+
       "<p><b>The Present:</b> ("+present.name+") "+present.present+"</p>"+
       "<p><b>The Future:</b> ("+future.name+") "+future.future+"</p>"+
     "</div>"
-  );
+  )}, 3000);
   let tarotEls = document.querySelectorAll('.tarot-cards');
   for (let i=0; i<tarotEls.length; i++){
     let tarotEl = tarotEls[i];
@@ -43,7 +42,7 @@ const yesNoDraw = () => {
   shuffle(deckArray);
   $("#card-deck").empty();
   $('#explore-tarot-display').empty();
-  $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
+  $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' class='animated slideInLeft' alt='Tarot Card Back' /></div>")
   $("#card-deck").append(
     "<div class='col-10'>"+
       "<div class='input-group mb-1'>"+
@@ -59,7 +58,7 @@ const yesNoDraw = () => {
 
 const askQuestion = () => {
   if (document.querySelector("#userQuestion").value){
-    question = $("#userQuestion")[0].value;
+    let question = $("#userQuestion")[0].value;
     $("#card-deck").empty();
     $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
     $("#card-deck").append("<div class='col-4 col-md-2'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' class='tarot-cards' value='"+deckArray[0].id+"' /></col>");
@@ -97,6 +96,7 @@ const exploreTarot = () => {
 };
 
 const displayCards = (option) => {
+  let min, max;
   switch(option) {
     case "majorArcana":
       min = 0;
@@ -139,10 +139,10 @@ const showTarotModal = (tVal) => {
   $("#tarot-modal").modal("show");
   $("#tarot-modal-row").empty();
   $("#tarot-modal-row").html(
-    "<div class='col-6 col-sm-5 mx-auto'>"+
+    "<div class='col-6 col-sm-6 mx-auto p-0'>"+
       "<img src='"+rwTarotDeck[tVal].image+"' alt='"+rwTarotDeck[tVal].name+"' style='width:100%' />"+
     "</div>"+ 
-    "<div class='col-12 col-sm-7'>"+
+    "<div class='col-12 col-sm-6'>"+
       "<h1>"+rwTarotDeck[tVal].name+"</h1><hr />"+
       "<p>"+rwTarotDeck[tVal].keywords+"</p><hr />"+
       "<p>"+rwTarotDeck[tVal].general+"</p>"+
