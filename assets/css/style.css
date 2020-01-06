@@ -79,11 +79,11 @@ footer img:hover {
 }
 
 #fog {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 125vh;
+  height: 100vh;
   overflow: hidden;
   pointer-events: none;
   background-attachment: fixed;
@@ -98,7 +98,6 @@ footer img:hover {
   width: 300%;
   background-size: contain;
   background-position: center;
-  background-repeat: repeat-x;
 }
 #fog:before {
   background-image: url("https://res.cloudinary.com/dkr52htco/image/upload/v1536173269/fog-1.png");

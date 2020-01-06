@@ -42,9 +42,9 @@ const yesNoDraw = () => {
   shuffle(deckArray);
   $("#card-deck").empty();
   $('#explore-tarot-display').empty();
-  $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' class='animated slideInLeft' alt='Tarot Card Back' /></div>")
+  $("#card-deck").append("<div class='col-6 col-md-3'><img src='./assets/images/card-backs/3.png' class='animated slideInLeft' alt='Tarot Card Back' /></div>")
   $("#card-deck").append(
-    "<div class='col-10'>"+
+    "<div class='col-9'>"+
       "<div class='input-group mb-1'>"+
         "<input type='text' class='form-control' id='userQuestion' placeholder='Enter your Yes/No question here...' aria-label='Users Question' aria-describedby='submitButton'>"+
         "<div class='input-group-append'>"+
@@ -60,10 +60,9 @@ const askQuestion = () => {
   if (document.querySelector("#userQuestion").value){
     let question = $("#userQuestion")[0].value;
     $("#card-deck").empty();
-    $("#card-deck").append("<div class='col-4 col-md-2'><img src='./assets/images/card-backs/3.png' alt='Tarot Card Back' /></div>")
-    $("#card-deck").append("<div class='col-4 col-md-2'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' class='tarot-cards' value='"+deckArray[0].id+"' /></col>");
+    $("#card-deck").append("<div class='col-6 col-md-3'><img src='"+deckArray[0].image+"' alt='"+deckArray[0].name+"' class='tarot-cards animated flipInY' value='"+deckArray[0].id+"' /></col>");
     $("#card-deck").append(
-      "<div class='col-12 col-md-8 reading mb-5'>"+
+      "<div class='col-12 col-md-9 reading mb-5'>"+
         "<p>"+question+"</p>"+
         "<p>"+deckArray[0].yesno+"</p>"+
       "</div>"
@@ -139,10 +138,10 @@ const showTarotModal = (tVal) => {
   $("#tarot-modal").modal("show");
   $("#tarot-modal-row").empty();
   $("#tarot-modal-row").html(
-    "<div class='col-6 col-sm-6 mx-auto p-0'>"+
+    "<div class='col-8 col-sm-4 mx-auto p-0'>"+
       "<img src='"+rwTarotDeck[tVal].image+"' alt='"+rwTarotDeck[tVal].name+"' style='width:100%' />"+
     "</div>"+ 
-    "<div class='col-12 col-sm-6'>"+
+    "<div class='col-12 col-sm-8'>"+
       "<h1>"+rwTarotDeck[tVal].name+"</h1><hr />"+
       "<p>"+rwTarotDeck[tVal].keywords+"</p><hr />"+
       "<p>"+rwTarotDeck[tVal].general+"</p>"+
