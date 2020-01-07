@@ -1,0 +1,63 @@
+#card-deck img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+#card-deck p{
+  color: #ffffff;
+  font-size: 1.3em;
+}
+
+#card-deck .reading{
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: #22222288;
+  padding: 25px;
+}
+
+#explore-tarot-display img {
+  width: 100px;
+  margin: 10px;
+}
+
+.modal-content {
+  color: #ffffff;
+  text-align: center;
+  background-color: #222222;
+  border: 5px solid #222222;
+}
+
+.modal-content hr {
+  background-color: #ffffff;
+}
+
+#tarot-modal-row .col-7 {
+  padding: 25px 50px 25px 25px;
+  font-size: 1.2em;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  margin: 10px;
+}
+
+footer p {
+  color: #663399;
+  background-color: #222222;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+
+footer img {
+  width: 100%;
+  border: 1px solid #222222;
+}
+
+footer img:hover {
+  border: 1px solid #663399;
+}
