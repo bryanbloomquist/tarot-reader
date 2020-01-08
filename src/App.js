@@ -6,10 +6,13 @@ import Button from "./Components/Header/Button";
 import tarotJSON from "./Components/tarot.json";
 import TarotCard from "./Components/TarotCard/TarotCard";
 import ThreeCardDraw from "./Components/ThreeCardDraw/ThreeCardDraw";
+import Modal from "./Components/Modal/Modal";
 
 function App() {
   const [tarotDeck, setTarotDeck] = useState([...tarotJSON]);
   const [showTCG, setShowTCG] = useState(false);
+  const [modalShow, setModalShow] = useState(false);
+  const [modalCard, setModalCard] = useState([]);
 
   const shuffle = (array) => {
     let i=0, j=0, temp=null
@@ -27,6 +30,16 @@ function App() {
     setTarotDeck(shuffle(tarotDeck));
     setShowTCG(true);
     console.log(tarotDeck[0].name);
+  }
+
+  const handleClose = () => setModalShow(false);
+
+  const handleShow = () => setModalShow(true);
+
+  const showTarotModal = (displaycard) => {
+    console.log(displaycard.name, displaycard.value);
+    setModalCard(displaycard);
+    handleShow();
   }
 
   const yesNoQuestion = () => {
@@ -59,17 +72,26 @@ function App() {
             futureDescription={tarotDeck[2].future}
           >
             <Col xs={3} md={3} lg={2}>
-              <TarotCard src={tarotDeck[0].image} alt={tarotDeck[0].name} delay={0} value={tarotDeck[0].id} />          
+              <TarotCard src={tarotDeck[0].image} alt={tarotDeck[0].name} delay={0} value={tarotDeck[0].id} click={()=>showTarotModal(tarotDeck[0])} />          
             </Col>
             <Col xs={3} md={3} lg={2}>
-              <TarotCard src={tarotDeck[1].image} alt={tarotDeck[1].name} delay={1} value={tarotDeck[1].id} />
+              <TarotCard src={tarotDeck[1].image} alt={tarotDeck[1].name} delay={1} value={tarotDeck[1].id} click={()=>showTarotModal(tarotDeck[1])} />
             </Col>
             <Col xs={3} md={3} lg={2}>
-              <TarotCard src={tarotDeck[2].image} alt={tarotDeck[2].name} delay={2} value={tarotDeck[2].id} />
+              <TarotCard src={tarotDeck[2].image} alt={tarotDeck[2].name} delay={2} value={tarotDeck[2].id} click={()=>showTarotModal(tarotDeck[2])} />
             </Col>
           </ThreeCardDraw>
         </Container> : null
       }
+
+      <Modal 
+        show={modalShow}
+        close={handleClose}
+        src={modalCard.image}
+        name={modalCard.name}
+        keywords={modalCard.keywords}
+        general={modalCard.general}
+      />
 
     </div>
 

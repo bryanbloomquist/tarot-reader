@@ -12,6 +12,7 @@ const TarotCard = (props) => {
       style={style}
       className={"animated flipInY delay-"+props.delay+"s"}
       value={props.id}
+      onClick={props.click}
     />
   )
 }

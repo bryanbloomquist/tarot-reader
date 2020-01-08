@@ -11,7 +11,7 @@ const ThreeCardDraw = (props) => {
     fontSize: "1.3em"
   }
   return (
-    <Row className="justify-content-center animated ">
+    <Row className="justify-content-center animated mb-4">
       {props.children}
       <Col xs={10} style={style} className="animated fadeIn delay-3s">
         <p><b>The Past:</b> ({props.past}) {props.pastDescription} </p>
