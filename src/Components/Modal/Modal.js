@@ -1,47 +1,51 @@
-import React from "react";
-import {Modal, Container, Row, Col, Button} from "react-bootstrap";
+import React, { useContext } from "react";
+import { Modal, Container, Row, Col, Button } from "react-bootstrap";
+import { Context } from "../../AppContext";
 
-const TarotModal = (props) => {
+const TarotModal = () => {
+  const { modalCard, modalShow, handleClose } = useContext(Context);
   const bodyStyle = {
     color: "#ffffff",
     textAlign: "center",
     backgroundColor: "#222222",
-    border: "5px solid #222222"
-  }
+    border: "none"
+  };
 
   const imgStyle = {
     width: "100%"
-  }
+  };
 
   const hrStyle = {
     backgroundColor: "#ffffff"
-  }
-  
+  };
+
   return (
-    <Modal show={props.show} onHide={props.close}>
+    <Modal show={modalShow} onHide={handleClose}>
       <Modal.Body style={bodyStyle}>
         <Container>
           <Row>
+            <Col xs={12}>
+              <h1>{modalCard.name}</h1>
+              <hr style={hrStyle} />
+              <p>{modalCard.keywords}</p>
+              <hr style={hrStyle} />
+            </Col>
             <Col xs={8} sm={4} className="mx-auto p-0">
-              <img src={props.src} alt={props.name} style={imgStyle} />            
+              <img src={modalCard.image} alt={modalCard.name} style={imgStyle} />
             </Col>
             <Col xs={12} sm={8}>
-              <h1>{props.name}</h1>
-              <hr style={hrStyle} />
-              <p>{props.keywords}</p>
-              <hr style={hrStyle} />
-              <p>{props.general}</p>
+              <p>{modalCard.general}</p>
             </Col>
           </Row>
         </Container>
       </Modal.Body>
       <Modal.Footer style={bodyStyle}>
-        <Button variant="secondary" onClick={props.close}>
+        <Button variant="secondary" onClick={handleClose}>
           Close
         </Button>
       </Modal.Footer>
     </Modal>
   );
-}
+};
 
 export default TarotModal;

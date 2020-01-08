@@ -23,7 +23,8 @@ body {
   background-attachment: fixed;
 }
 
-#fog:before, #fog:after {
+#fog:before,
+#fog:after {
   content: "";
   position: absolute;
   top: 0;
@@ -52,4 +53,3 @@ body {
     transform: translate3d(-200vw, 0, 0);
   }
 }
-

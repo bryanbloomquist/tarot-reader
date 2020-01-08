@@ -1,20 +1,20 @@
 import React from "react";
 
-const TarotCard = (props) => {
+const TarotCard = props => {
   const style = {
     width: "100%",
     marginBottom: "20px"
-  }
+  };
   return (
-    <img 
+    <img
       src={props.src}
       alt={props.alt}
       style={style}
-      className={"animated flipInY delay-"+props.delay+"s"}
+      className={"animated flipInY delay-" + props.delay + "s"}
       value={props.id}
-      onClick={props.click}
+      onClick={props.onClick}
     />
-  )
-}
+  );
+};
 
 export default TarotCard;

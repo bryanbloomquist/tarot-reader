@@ -1,27 +1,4 @@
-const threeCardDraw = () => {
-  shuffle(deckArray);
-  let past = deckArray[0];
-  let present = deckArray[1];
-  let future = deckArray[2];
-  $("#card-deck").empty();
-  $('#explore-tarot-display').empty();
-  for (let i = 0; i < 3; i++) {
-    $("#card-deck").append("<div class='col-4 col-md-3 col-lg-2'><img src='"+deckArray[i].image+"' alt='"+deckArray[i].name+"' class='tarot-cards animated flipInY delay-"+i+"s' value='"+deckArray[i].id+"' /></col>");
-  };
-  setTimeout(function() {$("#card-deck").append(
-    "<div class='col-10 reading'>"+
-      "<p><b>The Past:</b> ("+past.name+") "+past.past+"</p>"+
-      "<p><b>The Present:</b> ("+present.name+") "+present.present+"</p>"+
-      "<p><b>The Future:</b> ("+future.name+") "+future.future+"</p>"+
-    "</div>"
-  )}, 3000);
-  let tarotEls = document.querySelectorAll('.tarot-cards');
-  for (let i=0; i<tarotEls.length; i++){
-    let tarotEl = tarotEls[i];
-    let tValue = tarotEls[i].attributes.value.value;
-    tarotEl.addEventListener("click", function() {showTarotModal(tValue);})
-  }
-};
+
 
 const yesNoDraw = () => {
   shuffle(deckArray);
