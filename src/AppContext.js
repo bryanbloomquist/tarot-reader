@@ -6,6 +6,8 @@ const Context = React.createContext({});
 const Provider = ({ children }) => {
   const [tarotDeck, setTarotDeck] = useState([...tarotJSON]);
   const [showTCD, setShowTCD] = useState(false);
+  const [showYNQ, setShowYNQ] = useState(false);
+  const [userQuestion, setUserQuestion] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [modalCard, setModalCard] = useState([]);
 
@@ -22,9 +24,26 @@ const Provider = ({ children }) => {
     return array;
   };
 
-  const threeCardDraw = () => { 
+  const threeCardDraw = () => {
     setTarotDeck(shuffle(tarotDeck));
+    setShowYNQ(false);
     setShowTCD(true);
+  };
+
+  const yesNoQuestion = () => {
+    console.log("Yes/No Question");
+    setShowTCD(false);
+    setShowYNQ(true);
+  };
+
+  const handleInputChange = event => {
+    setUserQuestion(event.target.value);
+    console.log(userQuestion);
+  };
+
+  const exploreTheTarot = () => {
+    console.log("Explore the Tarot");
+    setShowTCD(false);
   };
 
   const handleClose = () => setModalShow(false);
@@ -36,29 +55,22 @@ const Provider = ({ children }) => {
     handleShow();
   };
 
-  const yesNoQuestion = () => {
-    console.log("Yes/No Question");
-    setShowTCD(false);
-  };
-
-  const exploreTheTarot = () => {
-    console.log("Explore the Tarot");
-    setShowTCD(false);
-  };
-
   return (
     <Context.Provider
       value={{
-        modalShow,
-        handleClose,
-        handleShow,
+        tarotDeck,
         showTCD,
+        showYNQ,
+        userQuestion,
+        modalShow,
+        modalCard,
         threeCardDraw,
         yesNoQuestion,
+        handleInputChange,
         exploreTheTarot,
-        modalCard,
-        showTarotModal,
-        tarotDeck
+        handleClose,
+        handleShow,
+        showTarotModal
       }}
     >
       {children}
