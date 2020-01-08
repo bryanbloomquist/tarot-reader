@@ -1,18 +1,3 @@
-//fisher-yates shuffle method
-const shuffle = (array) => {
-	let i = 0, j = 0, temp = null
-	for (i = array.length - 1; i > 0; i--) {
-		j = Math.floor(Math.random() * (i + 1));
-		temp = array[i];
-		array[i] = array[j];
-		array[j] = temp;
-	}
-	return array;
-};
-
-let deckArray = [];
-deckArray = deckArray.concat(rwTarotDeck);
-
 const threeCardDraw = () => {
   shuffle(deckArray);
   let past = deckArray[0];
