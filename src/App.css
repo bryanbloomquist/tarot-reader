@@ -213,6 +213,7 @@ footer img:hover {
 
 @media screen and (max-width: 600px) {
   footer {
-    display: none;
+    position: relative;
+    margin: 150px auto 20px;
   }
 }
