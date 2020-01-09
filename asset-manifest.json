@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/tarot-reader/static/css/main.fb0189f6.chunk.css",
-    "main.js": "/tarot-reader/static/js/main.0da87d9c.chunk.js",
-    "main.js.map": "/tarot-reader/static/js/main.0da87d9c.chunk.js.map",
+    "main.css": "/tarot-reader/static/css/main.62859c50.chunk.css",
+    "main.js": "/tarot-reader/static/js/main.c3264bef.chunk.js",
+    "main.js.map": "/tarot-reader/static/js/main.c3264bef.chunk.js.map",
     "runtime-main.js": "/tarot-reader/static/js/runtime-main.f65665f2.js",
     "runtime-main.js.map": "/tarot-reader/static/js/runtime-main.f65665f2.js.map",
     "static/js/2.b72f976c.chunk.js": "/tarot-reader/static/js/2.b72f976c.chunk.js",
     "static/js/2.b72f976c.chunk.js.map": "/tarot-reader/static/js/2.b72f976c.chunk.js.map",
     "index.html": "/tarot-reader/index.html",
-    "precache-manifest.1f1794bdb535851ba0856678326e8479.js": "/tarot-reader/precache-manifest.1f1794bdb535851ba0856678326e8479.js",
+    "precache-manifest.e6ce7b3da3f47d05f41ddc9ed2094132.js": "/tarot-reader/precache-manifest.e6ce7b3da3f47d05f41ddc9ed2094132.js",
     "service-worker.js": "/tarot-reader/service-worker.js",
-    "static/css/main.fb0189f6.chunk.css.map": "/tarot-reader/static/css/main.fb0189f6.chunk.css.map",
+    "static/css/main.62859c50.chunk.css.map": "/tarot-reader/static/css/main.62859c50.chunk.css.map",
     "static/js/2.b72f976c.chunk.js.LICENSE": "/tarot-reader/static/js/2.b72f976c.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.f65665f2.js",
     "static/js/2.b72f976c.chunk.js",
-    "static/css/main.fb0189f6.chunk.css",
-    "static/js/main.0da87d9c.chunk.js"
+    "static/css/main.62859c50.chunk.css",
+    "static/js/main.c3264bef.chunk.js"
   ]
 }
