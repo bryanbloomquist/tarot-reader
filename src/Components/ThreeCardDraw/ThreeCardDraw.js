@@ -11,15 +11,6 @@ const ThreeCardDraw = () => {
     setTD(tarotDeck);
   }, [tarotDeck]);
 
-  const style = {
-    border: "2px solid #ffffff",
-    borderRadius: "10px",
-    backgroundColor: "#22222288",
-    padding: "25px",
-    color: "#ffffff",
-    fontSize: "1.3em"
-  };
-
   if (!showTCD) {
     return null;
   }
@@ -38,7 +29,7 @@ const ThreeCardDraw = () => {
             />
           </Col>
         ))}
-        <Col xs={10} style={style} className="animated fadeIn delay-3s slower">
+        <Col xs={10} className="tarot-read animated fadeIn delay-3s slower">
           <p>
             <b>The Past:</b> ({tarotDeck[0].name}) {tarotDeck[0].past}
           </p>

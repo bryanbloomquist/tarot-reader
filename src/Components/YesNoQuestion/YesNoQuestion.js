@@ -3,7 +3,7 @@ import { Container, Row, Col, FormControl, InputGroup, Button } from "react-boot
 import { Context } from "../../AppContext";
 
 const YesNoQuestion = () => {
-  const { showYNQ, handleInputChange, userQuestion } = useContext(Context);
+  const { showYNQ, handleInputChange, userQuestion, yesNoAnswer } = useContext(Context);
 
   if (!showYNQ) {
     return null;
@@ -22,7 +22,10 @@ const YesNoQuestion = () => {
               onChange = { handleInputChange }
             />
             <InputGroup.Append>
-              <Button variant="outline-light">Submit</Button>
+              <Button 
+                variant="outline-light"
+                onClick={yesNoAnswer}  
+              >Submit</Button>
             </InputGroup.Append>
           </InputGroup>
         </Col>

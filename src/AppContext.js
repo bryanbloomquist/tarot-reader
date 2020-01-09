@@ -7,6 +7,7 @@ const Provider = ({ children }) => {
   const [tarotDeck, setTarotDeck] = useState([...tarotJSON]);
   const [showTCD, setShowTCD] = useState(false);
   const [showYNQ, setShowYNQ] = useState(false);
+  const [showYNA, setShowYNA] = useState(false);
   const [userQuestion, setUserQuestion] = useState("");
   const [modalShow, setModalShow] = useState(false);
   const [modalCard, setModalCard] = useState([]);
@@ -27,14 +28,23 @@ const Provider = ({ children }) => {
   const threeCardDraw = () => {
     setTarotDeck(shuffle(tarotDeck));
     setShowYNQ(false);
+    setShowYNA(false);
     setShowTCD(true);
   };
 
   const yesNoQuestion = () => {
-    console.log("Yes/No Question");
+    setTarotDeck(shuffle(tarotDeck));
     setShowTCD(false);
+    setShowYNA(false);
     setShowYNQ(true);
   };
+
+  const yesNoAnswer = () => {
+    console.log("Yes/No Answer");
+    setShowTCD(false);
+    setShowYNQ(false);
+    setShowYNA(true);
+  }
 
   const handleInputChange = event => {
     setUserQuestion(event.target.value);
@@ -61,11 +71,13 @@ const Provider = ({ children }) => {
         tarotDeck,
         showTCD,
         showYNQ,
+        showYNA,
         userQuestion,
         modalShow,
         modalCard,
         threeCardDraw,
         yesNoQuestion,
+        yesNoAnswer,
         handleInputChange,
         exploreTheTarot,
         handleClose,

@@ -1,5 +1,37 @@
 @charset "UTF-8";
 
+/* STYLING THE ELEMENTS */
+
+.jumbotron {
+  background-color: #22222211;
+}
+
+.tarot-read {
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  background-color: #22222288;
+  padding: 25px;
+  color: #ffffff;
+  font-size: 1.3em;
+  margin-bottom: 50px;
+}
+
+hr {
+  background-color: #ffffff;
+}
+
+.modal-body {
+  color: #ffffff;
+  text-align: center;
+  background-color: #222222;
+  border: none;
+}
+
+img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
 /* ANIMATION */
 
 @-webkit-keyframes fadeIn {
