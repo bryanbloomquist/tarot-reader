@@ -30,10 +30,17 @@ const Provider = ({ children }) => {
 
   const threeCardDraw = () => {
     setTarotDeck(shuffle(tarotDeck));
-    setShowYNQ(false);
-    setShowYNA(false);
-    setShowETT(false);
-    setShowTCD(true);
+    if (showTCD === false) {
+      setShowYNQ(false);
+      setShowYNA(false);
+      setShowETT(false);
+      setShowTCD(true);  
+    } else {
+      setShowTCD(false);
+      setTimeout(()=> { // this is a hack to set state to false to force a re-render
+        setShowTCD(true)
+      }, 0);
+    };
   };
 
   const yesNoQuestion = () => {
@@ -54,7 +61,6 @@ const Provider = ({ children }) => {
   const handleInputChange = event => setUserQuestion(event.target.value);
 
   const exploreTheTarot = () => {
-    console.log("Explore the Tarot");
     setShowTCD(false);
     setShowYNQ(false);
     setShowYNA(false);
