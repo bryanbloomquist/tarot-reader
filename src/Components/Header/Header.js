@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Jumbotron } from "react-bootstrap";
-import Button from "./Button";
+import Button from "../Button/Button";
 import { Context } from "../../AppContext";
 
 const Header = () => {

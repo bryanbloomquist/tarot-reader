@@ -12,14 +12,20 @@ const YesNoQuestion = () => {
   return (
     <Container>
       <Row className="justify-content-center">
-        <Col xs={8}>
-          <InputGroup className="m-3">
+        <Col xs={12} sm={8}>
+          <InputGroup>
             <FormControl
+              autoFocus
               placeholder="Enter your Yes/No question here...."
               aria-label="User's Question"
               aria-describedby="User's Question Input"
               value={userQuestion}
               onChange = { handleInputChange }
+              onKeyPress = {(event) => {
+                if (event.key === "Enter") {
+                  yesNoAnswer()
+                }
+              }}
             />
             <InputGroup.Append>
               <Button 

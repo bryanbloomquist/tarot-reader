@@ -1,0 +1,28 @@
+[
+  {
+    "id": 0,
+    "name": "Major Aracana",
+    "min": 0,
+    "max": 21
+  },{
+    "id": 1,
+    "name": "Suit of Cups",
+    "min": 36,
+    "max": 49
+  },{
+    "id": 2,
+    "name": "Suit of Pentacles",
+    "min": 64,
+    "max": 77
+  },{
+    "id": 3,
+    "name": "Suit of Swords",
+    "min": 50,
+    "max": 63
+  },{
+    "id": 4,
+    "name": "Suit of Wands",
+    "min": 22,
+    "max": 35
+  }
+]

@@ -15,7 +15,7 @@ const YesNoAnswer = () => {
   return (
     <Container>
       <Row className="justify-content-center">
-        <Col xs={6} md={3}>
+        <Col xs={6} sm={4} md={3}>
           <TarotCard
             src={tarotDeck[0].image}
             alt={tarotDeck[0].name}
@@ -24,7 +24,7 @@ const YesNoAnswer = () => {
             onClick={() => showTarotModal(tarotDeck[0])}
           />
         </Col>
-        <Col xs={12} md={9} className="tarot-read animated fadeIn delay-1s slower">
+        <Col xs={12} sm={8} md={9} className="tarot-read animated fadeIn delay-1s slower">
           <p>Your question: {userQuestion}</p>
           <hr />
           <p>{tarotDeck[0].yesno}</p>

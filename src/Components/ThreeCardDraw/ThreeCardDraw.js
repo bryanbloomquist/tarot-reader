@@ -14,12 +14,12 @@ const ThreeCardDraw = () => {
   if (!showTCD) {
     return null;
   }
-  
+
   return (
     <Container>
       <Row className="justify-content-center animated mb-4">
         {td.slice(0, 3).map((tarot, i) => (
-          <Col xs={3} md={3} lg={2} key={tarot.id}>
+          <Col xs={4} md={3} lg={2} key={tarot.id} className="p-1">
             <TarotCard
               src={tarot.image}
               alt={tarot.name}

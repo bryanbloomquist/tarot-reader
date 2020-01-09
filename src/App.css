@@ -32,6 +32,41 @@ img {
   margin-bottom: 20px;
 }
 
+.explore-title {
+  text-align: center;
+  color: #ffffff;
+}
+
+.explore-card {
+  width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 75px;
+  margin: 10px;
+}
+
+footer p {
+  color: #ffffff;
+  background-color: #222222;
+  width: 100%;
+  text-align: center;
+  margin: 0px;
+}
+
+footer img {
+  width: 100%;
+  border: 1px solid #222222;
+  margin-bottom: 0;
+}
+
+footer img:hover {
+  border: 1px solid #663399;
+}
+
 /* ANIMATION */
 
 @-webkit-keyframes fadeIn {
