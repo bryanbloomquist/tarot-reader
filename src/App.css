@@ -210,3 +210,9 @@ footer img:hover {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
+
+@media screen and (max-width: 600px) {
+  footer {
+    display: none;
+  }
+}
