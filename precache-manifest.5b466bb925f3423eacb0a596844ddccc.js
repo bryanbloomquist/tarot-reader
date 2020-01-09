@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6423498823f9aeccae83ee6bc62bfd2d",
+    "revision": "53b73b8654294b07852acb77f009ccd0",
     "url": "/bryanbloomquist.github.io/tarot-reader/index.html"
   },
   {
-    "revision": "fd1b8074091eab815bd0",
+    "revision": "88b7d3c89b301bf09ae9",
     "url": "/bryanbloomquist.github.io/tarot-reader/static/css/main.fb0189f6.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/bryanbloomquist.github.io/tarot-reader/static/js/2.b72f976c.chunk.js.LICENSE"
   },
   {
-    "revision": "fd1b8074091eab815bd0",
-    "url": "/bryanbloomquist.github.io/tarot-reader/static/js/main.5b2bc533.chunk.js"
+    "revision": "88b7d3c89b301bf09ae9",
+    "url": "/bryanbloomquist.github.io/tarot-reader/static/js/main.0d2b1ff4.chunk.js"
   },
   {
     "revision": "4a79b3ac2f7128bf0844",
