@@ -45,6 +45,7 @@ const Provider = ({ children }) => {
 
   const yesNoQuestion = () => {
     setTarotDeck(shuffle(tarotDeck));
+    setUserQuestion("");
     setShowTCD(false);
     setShowYNA(false);
     setShowETT(false);
