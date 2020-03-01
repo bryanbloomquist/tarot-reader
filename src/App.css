@@ -20,6 +20,10 @@ hr {
   background-color: #ffffff;
 }
 
+.card {
+  cursor: pointer;
+}
+
 .modal-body {
   color: #ffffff;
   text-align: center;
@@ -65,6 +69,13 @@ footer img {
 
 footer img:hover {
   border: 1px solid #663399;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    position: relative;
+    margin: 150px auto 20px;
+  }
 }
 
 /* ANIMATION */
@@ -209,11 +220,4 @@ footer img:hover {
 .animated.slower {
   -webkit-animation-duration: 3s;
   animation-duration: 3s;
-}
-
-@media screen and (max-width: 600px) {
-  footer {
-    position: relative;
-    margin: 150px auto 20px;
-  }
 }
