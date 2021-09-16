@@ -1,0 +1,18 @@
+.logo {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 75px;
+    padding: 5px;
+    background-color: $color-gray-dark;
+    border-radius: 8px;
+    border: 2px solid #666;
+
+    img {
+        width: 100%;
+    }
+    p {
+        color: $color-white;
+        text-align: center;
+    }
+}

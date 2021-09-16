@@ -1,0 +1,20 @@
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%; // 1rem = 10px ; 10 ÷ 16 = 0.625
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "IM Fell DW Pica", serif;
+	font-size: 2rem;
+	color: $color-black;
+    background-color: $color-purple;
+}
+
