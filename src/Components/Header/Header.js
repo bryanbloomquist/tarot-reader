@@ -8,9 +8,9 @@ const Header = () => {
     return (
         <div className="hero">
             <h1 className="hero__title">Get your Tarot reading!</h1>
-            <Button name="Past, Present, Future" onClick={threeCardDraw} />
-            <Button name="Yes/No Question" onClick={yesNoQuestion} />
-            <Button name="Explore the Tarot" onClick={exploreTheTarot} />
+            <Button classes="button" name="Past, Present, Future" onClick={threeCardDraw} />
+            <Button classes="button" name="Yes/No Question" onClick={yesNoQuestion} />
+            <Button classes="button" name="Explore the Tarot" onClick={exploreTheTarot} />
         </div>
     );
 };

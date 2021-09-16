@@ -1,0 +1,22 @@
+.input {
+    width: 50%;
+
+    &--question {
+        padding: 0.8rem 2rem;
+        background-color: $color-gray-subdued;
+        border-radius: 1rem;
+        color: $color-white;
+        font-size: 1.6rem;
+        font-family: $font-serif;
+
+        &::placeholder {
+            color: $color-white;
+            font-size: 1.6rem;
+            font-family: $font-serif;
+        }
+
+        &:focus-visible {
+            outline-width: 0;
+        }
+    }
+}

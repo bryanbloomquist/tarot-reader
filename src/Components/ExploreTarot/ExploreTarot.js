@@ -16,9 +16,10 @@ const ExploreTarot = () => {
         <div className="container">
             <div className="row--center">
                 {exploreData.map((data, i) => (
-                    <Button 
+                    <Button
+                        classes="button"
                         onClick={() => setDisplaySuit(exploreData[data.id])}
-                        name = {data.name}
+                        name={data.name}
                         key={i}
                     />
                 ))}

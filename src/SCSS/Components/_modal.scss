@@ -1,31 +1,31 @@
 .modal {
-	position: fixed;
-	z-index: 500;
-	background-color: $color-white;
-	width: 90%;
-	max-height: 80%;
-	border: 1px solid $color-gray-dark;
-	box-shadow: 1px 1px 1px $color-black;
-	left: 5%;
-	top: 10%;
-	box-sizing: border-box;
-	overflow-y: auto;
-	transition: all 0.6s ease-out;
+    position: fixed;
+    z-index: 500;
+    background-color: $color-white;
+    width: 90%;
+    max-height: 80%;
+    border: 1px solid $color-gray-dark;
+    box-shadow: 1px 1px 1px $color-black;
+    left: 5%;
+    top: 10%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: all 0.6s ease-out;
 
-	@media only screen and (min-width: 600px) {
-		width: 60rem;
-		left: calc(50% - 30rem);
-	}
+    @media only screen and (min-width: 600px) {
+        width: 60rem;
+        left: calc(50% - 30rem);
+    }
 
     &__backdrop {
-		width: 100%;
-		height: 100%;
-		position: fixed;
-		z-index: 100;
-		left: 0;
-		top: 0;
-		background-color: $color-gray-subdued
-	}
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        background-color: $color-gray-subdued;
+    }
 
     &__header {
         text-align: center;
@@ -50,7 +50,7 @@
     }
 
     &__body {
-        padding: 0rem 1.25rem .5rem;
+        padding: 0rem 1.25rem 0.5rem;
         max-height: 40rem;
         overflow-y: auto;
         display: flex;
@@ -69,7 +69,6 @@
 
             @include respond(tablet) {
                 margin: 0 2rem 0 0;
-                -webkit-box-reflect: below -1rem -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.66)));
             }
         }
 
@@ -88,7 +87,8 @@
         border-radius: 100%;
         cursor: pointer;
 
-        &::before, &::after {
+        &::before,
+        &::after {
             content: "";
             position: absolute;
             border-top: 2px solid $color-gray-dark;
