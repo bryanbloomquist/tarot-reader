@@ -16,14 +16,24 @@ const TarotModal = React.memo((props) => {
 					opacity: modalShow ? "1" : "0",
 				}}
 			>
-				<div className="modal__header">
+                <img src={modalCard.image} alt={modalCard.name} className="tarot-card" />
+                <div className="modal__body">
+                    <h2>{modalCard.name}</h2>
+                    <hr/>
+                    <p><span>{modalCard.keywords}</span></p>
+                    <hr/>
+                    <p>{modalCard.general}</p>
+                </div>
+				{/* 
+                <div className="modal__header">
                     <h2>{modalCard.name}</h2>
                     <p>{modalCard.keywords}</p>
                 </div>
                 <div className="modal__body">
                     <img src={modalCard.image} alt={modalCard.name} className="tarot-card"/>
                     <p>{modalCard.general}</p>
-                </div>
+                </div> 
+                */}
                 <button className="modal__close-button" onClick={handleClose}>&nbsp;</button>
 			</div>
 		</Aux>

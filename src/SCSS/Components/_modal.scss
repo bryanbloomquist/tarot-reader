@@ -1,10 +1,13 @@
 .modal {
     position: fixed;
+    display: flex;
+    flex-direction: column;
     z-index: 500;
-    background-color: $color-white;
+    background-color: $color-gray-dark;
     width: 90%;
     max-height: 80%;
-    border: 1px solid $color-gray-dark;
+    border: 1px solid $color-white;
+    border-radius: 2rem;
     box-shadow: 1px 1px 1px $color-black;
     left: 5%;
     top: 10%;
@@ -15,6 +18,7 @@
     @media only screen and (min-width: 600px) {
         width: 60rem;
         left: calc(50% - 30rem);
+        flex-direction: row;
     }
 
     &__backdrop {
@@ -27,53 +31,46 @@
         background-color: $color-gray-subdued;
     }
 
-    &__header {
-        text-align: center;
-        padding: 2rem;
-        margin-bottom: 1rem;
-        border-bottom: 1px solid $color-gray-subdued;
-        color: $color-gray-dark;
+    .tarot-card {
+        display: block;
+        margin: 2rem auto;
+        box-shadow: none;
+        align-self: flex-start;
 
-        & h2 {
-            font-size: 2.4rem;
-            @include respond(tablet) {
-                font-size: 3.6rem;
-            }
-        }
-
-        & p {
-            font-size: 1.6rem;
-            @include respond(tablet) {
-                font-size: 2rem;
-            }
-        }
+        // @include respond(tablet) {
+        //     margin: 0 2rem 0 0;
+        // }
     }
 
     &__body {
-        padding: 0rem 1.25rem 0.5rem;
-        max-height: 40rem;
+        padding: 2rem 1rem;
         overflow-y: auto;
-        display: flex;
-        flex-direction: column;
+        width: 100%;
+        color: $color-white;
 
         @include respond(tablet) {
             max-height: unset;
             flex-direction: row;
+            width: 60%;
         }
 
-        & .tarot-card {
-            display: block;
-            margin: 0 auto;
-            box-shadow: none;
-            align-self: flex-start;
-
-            @include respond(tablet) {
-                margin: 0 2rem 0 0;
-            }
+        h2 {
+            text-align: center;
         }
 
-        & p {
+        hr {
+            width: 50%;
+            margin: 1rem auto;
+        }
+
+        p {
             padding: 1rem;
+            text-align: center;
+            
+            span {
+                font-size: .8em;
+                display: block;
+            }
         }
     }
 
