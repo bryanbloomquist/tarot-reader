@@ -36,17 +36,17 @@
         }
 
         &--reading {
-            margin: -2rem auto 4rem;
+            margin: 2rem auto 2rem;
             padding: 2rem;
             width: 85%;
-            background-color: $color-gray-dark;
+            background-color: $color-gray;
             color: $color-white;
             border: 2px solid white;
             border-radius: 2rem;
 
             @include respond(tablet) {
-                margin: 4rem auto;
-                width: 66%;
+                margin: -15rem auto 0;
+                width: 60rem;
             }
 
             & p {

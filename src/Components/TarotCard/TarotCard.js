@@ -5,7 +5,11 @@ const TarotCard = props => {
         <img
             src={props.src}
             alt={props.alt}
-            className={"tarot-card animated flipInY delay-" + props.delay + "s"}
+            className={
+                props.delay || props.delay === 0
+                    ? "tarot-card animated flipInY delay-" + props.delay + "s"
+                    : "tarot-card animated fadeIn"
+            }
             value={props.id}
             onClick={props.onClick}
         />

@@ -6,38 +6,28 @@ import ModalBackdrop from "./ModalBackdrop";
 const TarotModal = React.memo((props) => {
     const { modalCard, modalShow, handleClose } = useContext(Context);
 
-	return (
-		<Aux>
-			<ModalBackdrop show={modalShow} clicked={handleClose} />
-			<div
-				className='modal'
-				style={{
-					transform: modalShow ? "translateY(0)" : "translateY(-100vh)",
-					opacity: modalShow ? "1" : "0",
-				}}
-			>
+    return (
+        <Aux>
+            <ModalBackdrop show={modalShow} clicked={handleClose} />
+            <div
+                className='modal'
+                style={{
+                    transform: modalShow ? "translateY(0)" : "translateY(-100vh)",
+                    opacity: modalShow ? "1" : "0",
+                }}
+            >
                 <img src={modalCard.image} alt={modalCard.name} className="tarot-card" />
                 <div className="modal__body">
                     <h2>{modalCard.name}</h2>
-                    <hr/>
+                    <hr />
                     <p><span>{modalCard.keywords}</span></p>
-                    <hr/>
+                    <hr />
                     <p>{modalCard.general}</p>
                 </div>
-				{/* 
-                <div className="modal__header">
-                    <h2>{modalCard.name}</h2>
-                    <p>{modalCard.keywords}</p>
-                </div>
-                <div className="modal__body">
-                    <img src={modalCard.image} alt={modalCard.name} className="tarot-card"/>
-                    <p>{modalCard.general}</p>
-                </div> 
-                */}
                 <button className="modal__close-button" onClick={handleClose}>&nbsp;</button>
-			</div>
-		</Aux>
-	);
+            </div>
+        </Aux>
+    );
 });
 
 export default TarotModal;

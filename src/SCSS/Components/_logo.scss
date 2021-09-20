@@ -1,12 +1,16 @@
 .logo {
     position: fixed;
-    bottom: 10px;
-    right: 10px;
-    width: 75px;
-    padding: 5px;
-    background-color: $color-gray-dark;
-    border-radius: 8px;
+    bottom: 1rem;
+    right: 1rem;
+    width: 5rem;
+    padding: 0.5rem;
+    background-color: $color-gray;
+    border-radius: 1rem;
     border: 2px solid #666;
+
+    @include respond(tablet) {
+        width: 7.5rem;
+    }
 
     img {
         width: 100%;
@@ -14,5 +18,10 @@
     p {
         color: $color-white;
         text-align: center;
+        font-size: 12px;
+
+        @include respond(tablet) {
+            font-size: 16px;
+        }
     }
 }

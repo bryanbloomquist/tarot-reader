@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: column;
     z-index: 500;
-    background-color: $color-gray-dark;
+    background-color: $color-gray;
     width: 90%;
     max-height: 80%;
     border: 1px solid $color-white;
@@ -21,6 +21,11 @@
         flex-direction: row;
     }
 
+    @media only screen and (min-width: 800px) {
+        width: 80rem;
+        left: calc(50% - 40rem);
+    }
+
     &__backdrop {
         width: 100%;
         height: 100%;
@@ -28,7 +33,7 @@
         z-index: 100;
         left: 0;
         top: 0;
-        background-color: $color-gray-subdued;
+        background-color: rgba($color-gray, 0.75);
     }
 
     .tarot-card {
@@ -36,15 +41,15 @@
         margin: 2rem auto;
         box-shadow: none;
         align-self: flex-start;
+        width: 75%;
 
-        // @include respond(tablet) {
-        //     margin: 0 2rem 0 0;
-        // }
+        @media only screen and (min-width: 600px) {
+            width: calc(40% - 4rem);
+        }
     }
 
     &__body {
         padding: 2rem 1rem;
-        overflow-y: auto;
         width: 100%;
         color: $color-white;
 
@@ -66,9 +71,9 @@
         p {
             padding: 1rem;
             text-align: center;
-            
+
             span {
-                font-size: .8em;
+                font-size: 0.8em;
                 display: block;
             }
         }
@@ -82,13 +87,14 @@
         height: 2rem;
         font-size: 1rem;
         border-radius: 100%;
+        border-style: solid;
         cursor: pointer;
 
         &::before,
         &::after {
             content: "";
             position: absolute;
-            border-top: 2px solid $color-gray-dark;
+            border-top: 2px solid $color-gray;
             height: 2px;
             width: 1.2rem;
             left: 50%;

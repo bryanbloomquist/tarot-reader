@@ -13,7 +13,7 @@
 
     &:hover {
         background-color: $color-white;
-        color: $color-gray-dark;
+        color: $color-gray;
     }
 
     @include respond(tablet) {
@@ -25,6 +25,6 @@
     &--submit {
         border-style: outset;
         background-color: rgba($color-white, 0.75);
-        color: $color-gray-dark;
+        color: $color-gray;
     }
 }
