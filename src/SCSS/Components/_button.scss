@@ -1,0 +1,30 @@
+.button {
+    color: $color-white;
+    border: 1px solid $color-white;
+    font-family: $font-serif;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: transparent;
+    font-size: 1.2rem;
+    line-height: 1;
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        background-color: $color-white;
+        color: $color-gray;
+    }
+
+    @include respond(tablet) {
+        margin: 1rem;
+        padding: 1rem 2rem;
+        font-size: 1.6rem;
+    }
+
+    &--submit {
+        border-style: outset;
+        background-color: rgba($color-white, 0.75);
+        color: $color-gray;
+    }
+}

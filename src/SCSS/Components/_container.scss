@@ -1,0 +1,98 @@
+.container {
+    max-width: 1200px;
+    margin: 0rem auto;
+
+    .row {
+        position: relative;
+        margin: 2rem 0;
+
+        &--cards {
+            text-align: center;
+
+            & .tarot-card {
+                -webkit-box-reflect: below 2rem -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.66)));
+                width: 10rem;
+
+                @include respond(tablet) {
+                    width: 20rem;
+                }
+            }
+        }
+
+        &--center {
+            margin: 1rem 0;
+            text-align: center;
+
+            & h2 {
+                margin-bottom: 1rem;
+                line-height: 1;
+                font-size: 3.2rem;
+                color: $color-white;
+
+                @include respond(tablet) {
+                    font-size: 4rem;
+                }
+            }
+        }
+
+        &--reading {
+            margin: 2rem auto 2rem;
+            padding: 2rem;
+            width: 85%;
+            background-color: $color-gray;
+            color: $color-white;
+            border: 2px solid white;
+            border-radius: 2rem;
+
+            @include respond(tablet) {
+                margin: -15rem auto 0;
+                width: 60rem;
+            }
+
+            p {
+                font-size: 1.6rem;
+                margin-bottom: 2rem;
+
+                @include respond(tablet) {
+                    font-size: 2rem;
+                }
+
+                span {
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &--answer {
+            display: flex;
+            flex-direction: column;
+
+            @include respond(tablet) {
+                flex-direction: row;
+            }
+
+            .tarot-card {
+                width: 15rem;
+                margin: 0rem auto;
+
+                @include respond(tablet) {
+                    margin: 2rem;
+                    width: unset;
+                }
+            }
+
+            .tarot-read {
+                border: 2px solid #fff;
+                border-radius: 10px;
+                background-color: rgba($color-gray, 0.5);
+                padding: 2rem;
+                color: #fff;
+                margin: 2rem;
+
+                hr {
+                    margin: 2rem 0;
+                }
+            }
+        }
+    }
+}

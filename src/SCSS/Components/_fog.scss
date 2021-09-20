@@ -1,0 +1,37 @@
+#fog {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    background-attachment: fixed;
+    &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 300%;
+        background-size: contain;
+        background-position: center;    
+    }
+    &::before{
+        background-image: url("../../Assets/Images/fog-1.png");
+        animation: drift 200s linear 0s infinite;    
+    }
+    &::after {
+        background-image: url("../../Assets/Images/fog-2.png");
+        animation: drift 100s linear 0s infinite;    
+    }
+}
+
+@keyframes drift {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    to {
+        transform: translate3d(-200vw, 0, 0);
+    }
+}

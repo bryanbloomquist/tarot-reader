@@ -1,0 +1,110 @@
+.modal {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 500;
+    background-color: $color-gray;
+    width: 90%;
+    max-height: 80%;
+    border: 1px solid $color-white;
+    border-radius: 2rem;
+    box-shadow: 1px 1px 1px $color-black;
+    left: 5%;
+    top: 10%;
+    box-sizing: border-box;
+    overflow-y: auto;
+    transition: all 0.6s ease-out;
+
+    @media only screen and (min-width: 600px) {
+        width: 60rem;
+        left: calc(50% - 30rem);
+        flex-direction: row;
+    }
+
+    @media only screen and (min-width: 800px) {
+        width: 80rem;
+        left: calc(50% - 40rem);
+    }
+
+    &__backdrop {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        left: 0;
+        top: 0;
+        background-color: rgba($color-gray, 0.75);
+    }
+
+    .tarot-card {
+        display: block;
+        margin: 2rem auto;
+        box-shadow: none;
+        align-self: flex-start;
+        width: 75%;
+
+        @media only screen and (min-width: 600px) {
+            width: calc(40% - 4rem);
+        }
+    }
+
+    &__body {
+        padding: 2rem 1rem;
+        width: 100%;
+        color: $color-white;
+
+        @include respond(tablet) {
+            max-height: unset;
+            flex-direction: row;
+            width: 60%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        hr {
+            width: 50%;
+            margin: 1rem auto;
+        }
+
+        p {
+            padding: 1rem;
+            text-align: center;
+
+            span {
+                font-size: 0.8em;
+                display: block;
+            }
+        }
+    }
+
+    &__close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
+        border-radius: 100%;
+        border-style: solid;
+        cursor: pointer;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            border-top: 2px solid $color-gray;
+            height: 2px;
+            width: 1.2rem;
+            left: 50%;
+            top: 50%;
+        }
+        &::before {
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+        &::after {
+            transform: translate(-50%, -50%) rotate(-45deg);
+        }
+    }
+}
