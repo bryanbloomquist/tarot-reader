@@ -13,7 +13,7 @@ const YesNoAnswer = () => {
 
     return (
         <div className="container">
-            <div className="row">
+            <div className="row row--answer">
                 <TarotCard
                     src={tarotDeck[0].image}
                     alt={tarotDeck[0].name}
@@ -21,8 +21,8 @@ const YesNoAnswer = () => {
                     value={tarotDeck[0].id}
                     onClick={() => showTarotModal(tarotDeck[0])}
                 />
-                <div className="card tarot-read animated fadeIn delay-1s slower">
-                    <p>Your question: {userQuestion}</p>
+                <div className="tarot-read animated fadeIn delay-1s slower">
+                    <p>Your question: <em>{userQuestion}</em></p>
                     <hr />
                     <p>{tarotDeck[0].yesno}</p>
                 </div>
