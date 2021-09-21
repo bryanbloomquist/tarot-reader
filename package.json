@@ -1,5 +1,6 @@
 {
     "name": "tarot-deck",
+    "homepage": "https://bryanbloomquist.github.io/tarot-reader",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
