@@ -10,10 +10,10 @@
             text-align: center;
 
             & .tarot-card {
-                -webkit-box-reflect: below 2rem -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.66)));
                 width: 10rem;
 
                 @include respond(tablet) {
+                    -webkit-box-reflect: below 2rem -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(250, 250, 250, 0.66)));
                     width: 20rem;
                 }
             }
